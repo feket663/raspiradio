@@ -1,0 +1,17 @@
+###################################################
+# This service will start the radio software      #
+###################################################
+[Unit]
+Description=Radio controller
+After=network-online.target
+
+[Service]
+User=root
+ExecStart=/install/startradio.sh
+Restart=always
+RestartSec=10
+StartLimitInterval=30
+StartLimitBurst=20
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,17 @@
+####################################################
+# This service will start spotify connect software #
+####################################################
+[Unit]
+Description=Spotify Connect
+After=network.target
+
+[Service]
+User=root
+ExecStart=/root/spotify-connect-web.sh --username ****** --password ****** --bitrate 320 --name raspiradio
+Restart=always
+RestartSec=10
+StartLimitInterval=30
+StartLimitBurst=20
+
+[Install]
+WantedBy=multi-user.target
