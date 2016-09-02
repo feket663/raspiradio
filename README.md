@@ -15,7 +15,7 @@ If you want to know more - please watch the video.
 The main features are:
 - Internet radio which works without smart phone
 - Status display
-- Airplay support
+- Airplay
 - Spotify Connect
 - USB sound input to connect a PC
 - AUX input
@@ -23,7 +23,8 @@ The main features are:
 - 3 band EQ
 - Stereo power amplifier
 - WiFi network
-- Stand by power consumption <1W
+- Stand by power consumption < 1W
+- decent audio quality
 
 To get all this running a Raspberry Pi looked like the best choice. All the streaming services are available and it is the best documented single board computer. The GPIO's allow the connection to a lot of devices.
 
