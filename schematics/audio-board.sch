@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.5.0">
+<eagle version="7.6.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="yes"/>
@@ -13713,6 +13713,8 @@ Version history:&lt;br&gt;
 <part name="U$18" library="SparkFun-Aesthetics" deviceset="AGND" device=""/>
 <part name="U$19" library="SparkFun-Aesthetics" deviceset="AGND" device=""/>
 <part name="U$2" library="SparkFun-Aesthetics" deviceset="AGND" device=""/>
+<part name="C17" library="rcl" deviceset="C-EU" device="025-025X050" value="0.1uF"/>
+<part name="U$20" library="SparkFun-Aesthetics" deviceset="AGND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -13765,7 +13767,7 @@ Version history:&lt;br&gt;
 <instance part="R1" gate="G$1" x="50.8" y="33.02" rot="R270"/>
 <instance part="R3" gate="G$1" x="58.42" y="33.02" rot="R270"/>
 <instance part="R4" gate="G$1" x="66.04" y="33.02" rot="R270"/>
-<instance part="SUPPLY2" gate="1" x="45.72" y="55.88"/>
+<instance part="SUPPLY2" gate="1" x="43.18" y="55.88"/>
 <instance part="T2" gate="G$1" x="66.04" y="-7.62" rot="MR0"/>
 <instance part="T1" gate="G$1" x="45.72" y="-25.4" rot="MR0"/>
 <instance part="D2" gate="1" x="55.88" y="5.08" rot="R90"/>
@@ -13818,6 +13820,8 @@ Version history:&lt;br&gt;
 <instance part="U$18" gate="G$1" x="17.78" y="86.36"/>
 <instance part="U$19" gate="G$1" x="109.22" y="43.18"/>
 <instance part="U$2" gate="G$1" x="218.44" y="38.1"/>
+<instance part="C17" gate="G$1" x="50.8" y="53.34"/>
+<instance part="U$20" gate="G$1" x="50.8" y="63.5" rot="R180"/>
 </instances>
 <busses>
 </busses>
@@ -14078,9 +14082,11 @@ Version history:&lt;br&gt;
 </segment>
 <segment>
 <pinref part="U1" gate="G$1" pin="VCC"/>
-<wire x1="43.18" y1="48.26" x2="45.72" y2="48.26" width="0.2032" layer="91"/>
-<wire x1="45.72" y1="48.26" x2="45.72" y2="55.88" width="0.2032" layer="91"/>
+<wire x1="43.18" y1="48.26" x2="43.18" y2="55.88" width="0.2032" layer="91"/>
 <pinref part="SUPPLY2" gate="1" pin="VCC"/>
+<pinref part="C17" gate="G$1" pin="2"/>
+<wire x1="43.18" y1="48.26" x2="50.8" y2="48.26" width="0.2032" layer="91"/>
+<junction x="43.18" y="48.26"/>
 </segment>
 <segment>
 <pinref part="JP4" gate="G$1" pin="1"/>
@@ -14163,9 +14169,13 @@ Version history:&lt;br&gt;
 <net name="N$33" class="0">
 <segment>
 <pinref part="U1" gate="G$1" pin="AOR"/>
-<wire x1="43.18" y1="43.18" x2="66.04" y2="43.18" width="0.2032" layer="91"/>
+<wire x1="43.18" y1="43.18" x2="63.5" y2="43.18" width="0.2032" layer="91"/>
 <pinref part="R4" gate="G$1" pin="1"/>
+<wire x1="63.5" y1="43.18" x2="66.04" y2="43.18" width="0.2032" layer="91"/>
 <wire x1="66.04" y1="43.18" x2="66.04" y2="38.1" width="0.2032" layer="91"/>
+<pinref part="K1" gate="3" pin="S"/>
+<wire x1="63.5" y1="66.04" x2="63.5" y2="43.18" width="0.2032" layer="91"/>
+<junction x="63.5" y="43.18"/>
 </segment>
 </net>
 <net name="N$34" class="0">
@@ -14211,24 +14221,20 @@ Version history:&lt;br&gt;
 <pinref part="R1" gate="G$1" pin="1"/>
 <pinref part="U1" gate="G$1" pin="AOL"/>
 <wire x1="43.18" y1="38.1" x2="50.8" y2="38.1" width="0.2032" layer="91"/>
-<wire x1="50.8" y1="38.1" x2="50.8" y2="81.28" width="0.2032" layer="91"/>
+<wire x1="50.8" y1="38.1" x2="55.88" y2="38.1" width="0.2032" layer="91"/>
+<wire x1="55.88" y1="38.1" x2="55.88" y2="81.28" width="0.2032" layer="91"/>
 <junction x="50.8" y="38.1"/>
-<wire x1="50.8" y1="81.28" x2="63.5" y2="81.28" width="0.2032" layer="91"/>
+<wire x1="55.88" y1="81.28" x2="63.5" y2="81.28" width="0.2032" layer="91"/>
 <pinref part="K1" gate="2" pin="S"/>
 <wire x1="63.5" y1="81.28" x2="63.5" y2="83.82" width="0.2032" layer="91"/>
 </segment>
 </net>
 <net name="N$36" class="0">
 <segment>
-<pinref part="K1" gate="3" pin="S"/>
-<wire x1="63.5" y1="66.04" x2="63.5" y2="60.96" width="0.2032" layer="91"/>
-<wire x1="63.5" y1="60.96" x2="58.42" y2="60.96" width="0.2032" layer="91"/>
 <pinref part="U1" gate="G$1" pin="VREF"/>
 <wire x1="43.18" y1="40.64" x2="58.42" y2="40.64" width="0.2032" layer="91"/>
 <pinref part="R3" gate="G$1" pin="1"/>
 <wire x1="58.42" y1="40.64" x2="58.42" y2="38.1" width="0.2032" layer="91"/>
-<wire x1="58.42" y1="60.96" x2="58.42" y2="40.64" width="0.2032" layer="91"/>
-<junction x="58.42" y="40.64"/>
 </segment>
 </net>
 <net name="N$37" class="0">
@@ -14491,6 +14497,11 @@ Version history:&lt;br&gt;
 <pinref part="U$3" gate="G$1" pin="AGND"/>
 <wire x1="20.32" y1="38.1" x2="12.7" y2="38.1" width="0.2032" layer="91"/>
 <wire x1="12.7" y1="38.1" x2="12.7" y2="27.94" width="0.2032" layer="91"/>
+</segment>
+<segment>
+<pinref part="C17" gate="G$1" pin="1"/>
+<pinref part="U$20" gate="G$1" pin="AGND"/>
+<wire x1="50.8" y1="60.96" x2="50.8" y2="55.88" width="0.2032" layer="91"/>
 </segment>
 </net>
 <net name="N$27" class="0">
