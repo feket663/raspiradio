@@ -10,7 +10,7 @@ The things you can buy like Sonos speakers tend to be expansive and useless with
 
 If you want to know more - please watch the video.
 
-[![Streaming Client](http://img.youtube.com/vi/7hVFVi_NzME/0.jpg)](http://www.youtube.com/watch?v=7hVFVi_NzME)
+[![Streaming Client](https://github.com/thk4711/raspiradio/blob/master/Images/video.jpg)](http://www.youtube.com/watch?v=7hVFVi_NzME)
 
 The main features are:
 - Internet radio which works without smart phone
