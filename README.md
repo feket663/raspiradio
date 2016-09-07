@@ -31,3 +31,16 @@ To get all this running a Raspberry Pi looked like the best choice. All the stre
 The software is written in phyton. This is my first project in that language. I would be happy to here what could be improved.
 
 Please have a look at the [WIKI](https://github.com/thk4711/raspiradio/wiki) for more details.
+
+### Todo
+- Implement tone defeat function
+- Figure out how to enable bluetooth
+- Spotify connect for more than one user
+- Metadata display for Airplay
+- Design low cost and low effort hardware version without a lot of soldering
+- Design better sounding high end hardware version (ES9018 DAC, LM3875 amplifier, PGA2311 volume control, bigger transformer)
+- WEB interface
+- files in "normal" locations (not everything under /install)
+- debian package
+- install script
+- I2S based USB sound interface with digital switching between Raspberry Pi and USB sound
